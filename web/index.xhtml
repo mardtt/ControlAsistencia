@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Sistema de Control de Asistencia</title>
+    </h:head>
+    <h:body>
+        <h:outputStylesheet library="css" name="style.css"/>
+        <h:form>
+            <b:container fluid="true">
+                <b:row>
+                    <b:panel class="encabezado">
+                        <b:column medium-screen="12">
+                            <h:outputText class="titulo" value="Sistema de Control de Asistencia"/>
+                        </b:column>
+                        <b:column medium-screen="12" class="subtitulo">
+                            <h:outputText value="Escuela Naval Almirante Padilla"/>
+                        </b:column>
+                    </b:panel>
+                </b:row>
+                <b:row style="text-align: center">
+                    <h:graphicImage library="images" name="logo_enap.png" style="height: 174px"/>
+                </b:row>
+                <b:row style="padding-top: 20px">
+                    <b:column medium-screen="4" />
+                    <b:column medium-screen="4">
+                        <b:panel style="border-style: solid; box-shadow: 1px 1px 5px;">
+                            <b:row style="text-align: center">
+                                <h:outputText style="font-weight: bolder" value="Inicio de Sesión"/>
+                            </b:row>
+                            <b:row class="arreglar" style="padding-left: 90px; padding-right: 150px">
+                                <b:formGroup>
+                                    <b:selectOneMenu>
+                                        <f:selectItem itemLabel="Perfil" itemValue=""/>
+                                        <f:selectItem itemLabel="Admin" itemValue="1" />
+                                        <f:selectItem itemLabel="Docente" itemValue="2" />
+                                        <f:selectItem itemLabel="Estudiante" itemValue="3" />
+                                    </b:selectOneMenu>
+                                </b:formGroup>
+                            </b:row>
+                            <b:row class="arreglar" style="padding-left: 90px; padding-right: 90px">
+                                <b:inputText placeholder="Usuario"/>
+                            </b:row>
+                            <b:row class="arreglar" style="padding-left: 90px; padding-right: 90px">
+                                <b:inputSecret placeholder="Contraseña"/>
+                            </b:row>
+                            <b:row class="arreglar" style="padding-left: 90px; padding-right: 100px">
+                                <h:link value="Restablecer Contraseña"/>                                
+                            </b:row>
+                            <b:row class="arreglar" style="text-align: center">
+                                <b:button style="background-color: #0844a4" look="primary" value="Entrar"/>
+                            </b:row>
+                        </b:panel>
+                    </b:column>
+                    <b:column medium-screen="4" />
+                </b:row>
+            </b:container>
+        </h:form>
+    </h:body>
+</html>
+
