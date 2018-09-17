@@ -1,0 +1,35 @@
+/* 
+    Created on : 30/08/2018, 10:34:54 AM
+    Author     : MARCO
+*/
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url("#{resource['fonts:Roboto-Regular.ttf']}") format('truetype');
+}
+
+body {
+    font-family: 'Roboto-Regular' !important;
+}
+
+.encabezado {
+    background-color: #0844a4 !important;
+    text-align: center;
+    height: 107px;
+    border-color: black;
+}
+
+.titulo {
+    font-weight: bolder;
+    font-size: 24px;
+    color: white !important;
+}
+
+.subtitulo {
+    font-size: 14px; 
+    color: white; 
+    text-decoration: underline;
+}
+
+.arreglar {
+    padding-top: 10px;
+}
