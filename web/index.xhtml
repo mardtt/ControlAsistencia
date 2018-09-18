@@ -8,7 +8,7 @@
         <title>Sistema de Control de Asistencia</title>
     </h:head>
     <h:body>
-        <h:outputStylesheet library="css" name="style.css"/>
+        <h:outputStylesheet library="css" name="login.css"/>
         <h:form>
             <b:container fluid="true">
                 <b:row>
@@ -27,11 +27,11 @@
                 <b:row style="padding-top: 20px">
                     <b:column medium-screen="4" />
                     <b:column medium-screen="4">
-                        <b:panel style="border-style: solid; box-shadow: 1px 1px 5px;">
+                        <b:panel class="panelInicio">
                             <b:row style="text-align: center">
                                 <h:outputText style="font-weight: bolder" value="Inicio de Sesión"/>
                             </b:row>
-                            <b:row class="arreglar" style="padding-left: 90px; padding-right: 150px">
+                            <b:row class="campos" style="padding-right: 150px">
                                 <b:formGroup>
                                     <b:selectOneMenu>
                                         <f:selectItem itemLabel="Perfil" itemValue=""/>
@@ -41,17 +41,17 @@
                                     </b:selectOneMenu>
                                 </b:formGroup>
                             </b:row>
-                            <b:row class="arreglar" style="padding-left: 90px; padding-right: 90px">
+                            <b:row class="campos">
                                 <b:inputText placeholder="Usuario"/>
                             </b:row>
-                            <b:row class="arreglar" style="padding-left: 90px; padding-right: 90px">
+                            <b:row class="campos">
                                 <b:inputSecret placeholder="Contraseña"/>
                             </b:row>
-                            <b:row class="arreglar" style="padding-left: 90px; padding-right: 100px">
+                            <b:row class="campos" style="padding-right: 100px">
                                 <h:link value="Restablecer Contraseña"/>                                
                             </b:row>
-                            <b:row class="arreglar" style="text-align: center">
-                                <b:button style="background-color: #0844a4" look="primary" value="Entrar"/>
+                            <b:row class="contenedorB">
+                                <b:button look="primary" value="Entrar"/>
                             </b:row>
                         </b:panel>
                     </b:column>

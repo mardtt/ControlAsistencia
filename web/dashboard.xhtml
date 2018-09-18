@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui">
+    <h:head>
+        <title>Sistema de Control de Asistencia</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <h:outputStylesheet library="css" name="principal.css"/>
+        <h:form>
+            <b:container fluid="true">
+                <b:row>                    
+                    <b:column medium-screen="2">
+
+                    </b:column>
+                    <b:column medium-screen="10" class="encabezado">
+                        <b:row>
+                            <b:column medium-screen="10" style="padding-top: 2.5em">
+                                <h:outputText value="Sistema de Control de Asistencia" class="titulo"/>
+                            </b:column>
+                            <b:column medium-screen="2" style="padding-top: 3em">
+                                <b:dropMenu value="Administrador">
+                                    <b:navLink value="Configuración" href="#"/>
+                                    <b:navLink value="Salir" href="#"/>
+                                </b:dropMenu>
+                            </b:column>
+                        </b:row>
+                    </b:column>
+                </b:row>
+            </b:container>
+        </h:form>
+    </h:body>
+</html>

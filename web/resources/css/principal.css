@@ -1,0 +1,29 @@
+/* 
+    Author     : MARCO
+*/
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url("#{resource['fonts:Roboto-Regular.ttf']}") format('truetype');
+}
+
+body {
+    font-family: 'Roboto-Regular' !important;
+}
+
+.encabezado {
+    background-color: #0844a4 !important;
+    text-align: center;
+    height: 107px;
+    border-color: black;
+}
+
+.encabezado .titulo {
+    font-weight: bolder;
+    font-size: 24px;
+    color: white !important;
+}
+
+.dropdown-toggle, .dropdown-toggle:focus, .dropdown-toggle:hover {
+    font-size: 16px;
+    color: white;
+}
