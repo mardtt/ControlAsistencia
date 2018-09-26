@@ -3,13 +3,19 @@
 */
 @font-face {
     font-family: 'Roboto-Regular';
-    src: url("#{resource['fonts:Roboto-Regular.ttf']}") format('truetype');
+    src: url("#{resource['fonts:Roboto-Regular.ttf']}") format('truetype');    
+}
+
+@font-face {    
+    font-family: 'Roboto-Thin';
+    src: url("#{resource['fonts:Roboto-Thin.ttf']}") format('truetype');
 }
 
 body {
     font-family: 'Roboto-Regular' !important;
 }
 
+/* <<<<<--  Header Izquierdo* -->>>>>*/
 .encabezado {
     background-color: #0844a4 !important;
     text-align: center;
@@ -26,4 +32,31 @@ body {
 .dropdown-toggle, .dropdown-toggle:focus, .dropdown-toggle:hover {
     font-size: 16px;
     color: white;
+}
+
+/* <<<<<--  Header Derecho -->>>>>*/
+.encabezado2 {
+    background-color: #033076 !important;
+    /* text-align: center;*/
+    height: 107px;
+    border-color: black;
+}
+
+.encabezado2 img {
+    height: 72px; 
+    width: 53px;
+}
+
+.encabezado2 .titulo {
+    font-weight: bold;
+    font-size: 24px;
+    color: white !important;
+}
+
+/* <<<<<--  Menu -->>>>>*/
+
+.menutitulo {
+    font-size: 16px;
+    color: #aaaaaa;
+    font-family: Roboto-Thin !important;
 }
