@@ -11,10 +11,19 @@
         <h:outputStylesheet library="css" name="principal.css"/>
         <h:form>
             <b:container fluid="true">
-                <b:row>                    
-                    <b:column medium-screen="2">
-
+                <b:row>
+                    <!-- <<<< Header Izquierdo >>>> -->          
+                    <b:column medium-screen="2" class="encabezado2">
+                        <b:row>
+                            <b:column medium-screen="5" style="padding-top: 1.5em">
+                                <h:graphicImage library="images" name="logo_enap.png"/>
+                            </b:column>
+                            <b:column medium-screen="7" style="padding-top: 2.5em">
+                                <h:outputText value="ENAP" class="titulo"/>
+                            </b:column>
+                        </b:row>
                     </b:column>
+                    <!-- <<<< Header Derecho >>>> -->   
                     <b:column medium-screen="10" class="encabezado">
                         <b:row>
                             <b:column medium-screen="10" style="padding-top: 2.5em">
@@ -27,6 +36,25 @@
                                 </b:dropMenu>
                             </b:column>
                         </b:row>
+                    </b:column>
+                </b:row>
+                <!-- <<<< Body >>>> --> 
+                <b:row>
+                    <b:column medium-screen="2" style="background-color: #7a7a7a;">
+                        <b:row style="background-color: #444444; text-align: center;">
+                            <h:outputText value="MENÚ PRINCIPAL" class="menutitulo"/>
+                        </b:row>
+                        <b:row style="padding-top: 1em;">
+                            <b:listLinks>
+                                <b:navLink value="Panel" href="#" style="background-color: #444444;color: white;"></b:navLink>
+                                <b:navLink value="Usuarios" href="#" style="background-color: #444444;color: white;"></b:navLink>
+                                <b:navLink value="Docentes" href="#" style="background-color: #444444;color: white;"></b:navLink>
+                                <b:navLink value="Estudiantes" href="#" style="background-color: #444444;color: white;"></b:navLink>
+                            </b:listLinks>
+                        </b:row>
+                    </b:column>
+                    <b:column medium-screen="10">
+
                     </b:column>
                 </b:row>
             </b:container>
