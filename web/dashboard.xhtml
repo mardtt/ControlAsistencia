@@ -2,7 +2,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:b="http://bootsfaces.net/ui">
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Sistema de Control de Asistencia</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -45,16 +46,50 @@
                             <h:outputText value="MENÚ PRINCIPAL" class="menutitulo"/>
                         </b:row>
                         <b:row style="padding-top: 1em;">
-                            <b:listLinks>
-                                <b:navLink value="Panel" href="#" style="background-color: #444444;color: white;"></b:navLink>
-                                <b:navLink value="Usuarios" href="#" style="background-color: #444444;color: white;"></b:navLink>
-                                <b:navLink value="Docentes" href="#" style="background-color: #444444;color: white;"></b:navLink>
-                                <b:navLink value="Estudiantes" href="#" style="background-color: #444444;color: white;"></b:navLink>
-                            </b:listLinks>
+                            <!-- <b:listLinks>
+                                 <b:navLink value="Panel" href="#" iconAwesome="fa-list-alt" style="background-color: #444444;color: white;"></b:navLink>
+                                 <b:navLink value="Usuarios" href="#" style="background-color: #444444;color: white;"></b:navLink>
+                                 <b:navLink value="Docentes" href="#" style="background-color: #444444;color: white;"></b:navLink>
+                                 <b:navLink value="Estudiantes" href="#" style="background-color: #444444;color: white;"></b:navLink>
+                             </b:listLinks> -->
+                            <b:panel title="Usuario" collapsed="true" iconAwesome="user">
+                                <b:listLinks style="text-align: center">
+                                    <b:navLink value="Añadir" href="#" style="color: white;" iconAwesome="user-plus"/>                                    
+                                    <b:navLink value="Ver" href="#" iconAwesome="eye"/>
+                                </b:listLinks>
+                            </b:panel>
+                            <b:panel title="Asignaturas" collapsed="true" iconAwesome="tasks">
+                                <b:listLinks>
+                                    <b:navLink value="Añadir" href="#" iconAwesome="plus"/>
+                                    <b:navLink value="Ver" href="#" iconAwesome="eye"/>
+                                </b:listLinks>
+                            </b:panel>
                         </b:row>
                     </b:column>
                     <b:column medium-screen="10">
-
+                        <b:row>
+                            <h:outputText value="Usuarios"/>
+                        </b:row>
+                        <b:row>
+                            <b:panel>
+                                <b:panelGrid columns="2" size="md">
+                                    <h:outputLabel value="Nombre"/>
+                                    <b:inputText />
+                                    <h:outputLabel value="E-mail"/>
+                                    <b:inputText />
+                                    <h:outputLabel value="Contraseña"/>
+                                    <b:inputText />
+                                    <h:outputLabel value="Confirmar Contraseña"/>
+                                    <b:inputText />
+                                    <h:outputLabel value="Perfíl"/>
+                                    <b:selectOneMenu required="true">
+                                        <f:selectItem itemLabel="Administrador" value="1"/>
+                                        <f:selectItem itemLabel="Docente" value="2"/>
+                                        <f:selectItem itemLabel="Estudiante" value="3"/>
+                                    </b:selectOneMenu>
+                                </b:panelGrid>
+                            </b:panel>
+                        </b:row>
                     </b:column>
                 </b:row>
             </b:container>

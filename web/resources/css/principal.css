@@ -60,3 +60,28 @@ body {
     color: #aaaaaa;
     font-family: Roboto-Thin !important;
 }
+
+.panel-group .panel {
+    background-color: #aaaaaa;
+    color: white;
+    border-style: none;
+    border-radius: 0em;
+}
+
+.panel-group .panel-heading {
+    background-color: #444444 !important;
+    color:white !important;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    text-align: center;
+}
+
+.panel .panel-body {
+    border-top-style: none !important;
+    padding: 0px;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    background-color: #7a7a7a !important;
+    border: 1px solid #0844a4;
+}
