@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:outputStylesheet library="css" name="test.css"/>
+
+        <h:form>
+            <b:navBar class="top-nav" brand="TUTORIAS" brandHref="#" fluid="true" fixed="top">
+                <b:navbarLinks pull="right" styleClass="hidden-xs">
+                    <b:dropMenu class="top-link" value="" iconAwesome="user-circle">
+                        <b:navLink href="#">
+                            <i class="fa fa-fw fa-user"/>
+                            <h:outputText value="Perfil"/>
+                        </b:navLink>
+                        <b:navLink></b:navLink>
+                        <b:navLink href="#">
+                            <i class="fa fa-fw fa-power-off"/>
+                            <h:outputText value="Perfil"/>
+                        </b:navLink>
+                    </b:dropMenu>
+                </b:navbarLinks>
+                <b:container id="container-left" class="side-nav">
+                    <b:row style="margin-top: 20px">
+                        <b:column col-lg="5">
+                            <b:thumbnail class="img-thumbnail">
+                                <h:graphicImage library="images" name="falcao.png"/>
+                            </b:thumbnail>
+                        </b:column>
+                        <b:column col-lg="7">
+                            <b:panelGrid class="txt-color" columns="1">
+                                <h:outputText value="Bienvenido,"/>
+                                <h:outputText class="txt-usuario" value=""/>
+                                <h:outputText class="txt-tipo-usuario" value=""/>
+                            </b:panelGrid>
+                        </b:column>
+                    </b:row>
+                    <b:row>
+                        <b:accordion expanded-panels="pan-tabla">
+                            <b:panel class="side-menu" id="pan-tabla" title="Tablas" iconAwesome="table">
+                                <b:listLinks class="side-item">
+                                    <b:navCommandLink value="Usuarios" action="#"/>
+                                    <b:navCommandLink value="Docentes" action="#"/>
+                                    <b:navCommandLink value="Estudiantes" action="#"/>
+                                </b:listLinks>
+                            </b:panel>
+                            <b:panel class="side-menu" id="pan-form" title="Formularios" iconAwesome="pencil-square-o">
+                                <b:listLinks class="side-item">
+                                    <b:navCommandLink value="Usuarios" actionListener="#" update="@form"/>
+                                </b:listLinks>
+                            </b:panel>
+                        </b:accordion>
+                    </b:row>
+                </b:container>
+            </b:navBar>
+            <b:container id="container-right" fluid="true">
+                <b:column col-lg="10" offset="2">
+                    <b:row>
+                        <b:panel>
+                            <h1><h:outputText value=""/></h1>
+                            <hr/>
+                            <b:dataTable rendered="" value="" var="usu">
+                                <b:dataTableColumn value="" />
+                                <b:dataTableColumn value=""/>
+                                <b:dataTableColumn value="" />
+                                <b:dataTableColumn value=""/>
+                                <b:dataTableColumn value="" />
+                                <b:dataTableColumn value="" />
+                                <b:dataTableColumn value="" />
+                                <b:dataTableColumn value="" />
+                            </b:dataTable>
+                            <b:dataTable rendered="" value="" var="doc">
+                                <b:dataTableColumn value="" />
+                                <b:dataTableColumn value="" />
+                                <b:dataTableColumn value="" />
+                                <b:dataTableColumn value=""/>
+                                <b:dataTableColumn value="" />
+                                <b:dataTableColumn value="" />
+                                <b:dataTableColumn value="}" />
+                            </b:dataTable>
+                            <b:column col-lg="6">
+                                <b:panelGrid rendered="" columns="2">
+                                    <h:outputLabel style="float: right" value="Nombre de usuario"/>
+                                    <b:inputText value=""/>
+                                    <h:outputLabel style="float: right" value="contraseña"/>
+                                    <b:inputText value=""/>
+                                    <h:outputLabel style="float: right" value="Apellido"/>
+                                    <b:inputText value=""/>
+                                    <h:outputLabel style="float: right" value="Nombre"/>
+                                    <b:inputText value=""/>
+                                    <h:outputLabel style="float: right" value="Telefono"/>
+                                    <b:inputText value=""/>
+                                    <h:outputLabel style="float: right" value="Email"/>
+                                    <b:inputText value=""/>
+                                    <h:outputLabel style="float: right" value="Tipo"/>
+                                    <b:formGroup>
+                                        <b:selectOneMenu onchange="" update="@form" value="">
+                                            <f:selectItem itemLabel="(Selecione)" itemValue="" />
+                                            <f:selectItem itemLabel="Estudiante" itemValue="Estudiante" />
+                                            <f:selectItem itemLabel="Docente" itemValue="Docente" />
+                                        </b:selectOneMenu>
+                                    </b:formGroup>
+                                </b:panelGrid>
+                                <b:panelGrid rendered="" columns="2">
+                                    <h:outputLabel style="float: right" value="Titulo"/>
+                                    <b:inputText value=""/>
+                                    <h:outputLabel style="float: right" value="Especialidad"/>
+                                    <b:inputText value=""/>
+                                    <b:commandButton action="#" value="Registrar" class="btn-login"/>
+                                </b:panelGrid>
+                                <b:panelGrid rendered="" columns="2">
+                                    <h:outputLabel style="float: right" value="Semestre"/>
+                                    <b:inputText value=""/>
+                                    <h:outputLabel style="float: right" value="Escuela"/>
+                                    <b:inputText value=""/>
+                                    <h:outputLabel style="float: right" value="Grupo"/>
+                                    <b:inputText value=""/>
+                                    <b:commandButton value="Registrar" class="btn-login" />
+                                </b:panelGrid>
+                            </b:column>
+                        </b:panel>
+                    </b:row>
+                </b:column>
+            </b:container>
+            <b:container fluid="true" style="background-color: #2b353b;color: #fff;">
+                <b:row>
+                    <b:column col-lg="4" offset="4">
+                        <h2> Equipo Desarrollador</h2>
+                        <h5>Luis Caballero</h5>
+                        <h5>Marcos Montalvo</h5>
+                        <h5>Osmel Verdibo</h5>
+                        <h5>Jans Marquez</h5>
+                    </b:column>
+                    <b:column col-lg="4">
+                        <h2> Tecnologias Usadas</h2>
+                        <h5>Java Server Faces</h5>
+                        <h5>Bootsfaces</h5>
+                        <h5>Font Awesome</h5>
+                    </b:column>
+                </b:row>
+                <b:row>
+                    <hr style="border-color: #222;margin-left: 270px;margin-right: 50px"/>
+                    <b:column style="text-align: center" col-lg="10" offset="2">
+                        <p>&copy; 2017 Luis Gustavo Caballero Sierra</p>
+                    </b:column>
+                </b:row>
+            </b:container>
+        </h:form>
+    </h:body>
+</html>
+
