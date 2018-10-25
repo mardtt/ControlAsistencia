@@ -2,14 +2,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:b="http://bootsfaces.net/ui"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:b="http://bootsfaces.net/ui">
     <h:head>
         <title>Sistema de Control de Asistencia</title>
     </h:head>
     <h:body>
         <h:outputStylesheet library="css" name="login.css"/>
         <h:form>
+            <h:message for="btnLogin"/>
             <b:container fluid="true">
                 <b:row>
                     <b:panel class="encabezado">
@@ -31,27 +31,18 @@
                             <b:row style="text-align: center">
                                 <h:outputText style="font-weight: bolder" value="Inicio de Sesión"/>
                             </b:row>
-                            <b:row class="campos" style="padding-right: 150px">
-                                <b:formGroup>
-                                    <b:selectOneMenu>
-                                        <f:selectItem itemLabel="Perfil" itemValue=""/>
-                                        <f:selectItem itemLabel="Admin" itemValue="1" />
-                                        <f:selectItem itemLabel="Docente" itemValue="2" />
-                                        <f:selectItem itemLabel="Estudiante" itemValue="3" />
-                                    </b:selectOneMenu>
-                                </b:formGroup>
+                            <b:row class="campos">
+                                <b:inputText placeholder="Identificacion" value="#{UsuarioController.usuario.identificacion}" type="number" 
+                                             required="true"/>
                             </b:row>
                             <b:row class="campos">
-                                <b:inputText placeholder="Usuario"/>
-                            </b:row>
-                            <b:row class="campos">
-                                <b:inputSecret placeholder="Contraseña"/>
+                                <b:inputSecret placeholder="Contraseña" value="#{UsuarioController.usuario.contrasena}"/>
                             </b:row>
                             <b:row class="campos" style="padding-right: 100px">
                                 <h:link value="Restablecer Contraseña"/>                                
                             </b:row>
                             <b:row class="contenedorB">
-                                <b:button look="primary" value="Entrar"/>
+                                <b:commandButton id="btnLogin" value="Entrar" action="#{UsuarioController.login()}" class="btnLogin"/>
                             </b:row>
                         </b:panel>
                     </b:column>
@@ -61,4 +52,3 @@
         </h:form>
     </h:body>
 </html>
-

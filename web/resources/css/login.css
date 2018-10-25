@@ -1,7 +1,7 @@
 /* 
-    Created on : 30/08/2018, 10:34:54 AM
-    Author     : MARCO
+    Author     : Marco.ENAP
 */
+
 @font-face {
     font-family: 'Roboto-Regular';
     src: url("#{resource['fonts:Roboto-Regular.ttf']}") format('truetype');
@@ -45,8 +45,16 @@ body .panelInicio {
     text-align: center;
 }
 
-.contenedorB button {
+.contenedorB .btnLogin {
     background-color: #0844a4;
+    color: #fff;
     height: 39px;
     width: 110px;
 }
+
+.btnLogin:hover,
+.btnLogin:focus {
+    background-color: #022f77 !important;
+    color: #fff !important;
+}
+
